@@ -7,8 +7,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  handlePatient: ()=> {
-    Actions.login()
+  questionSubmit: ()=> {
+    
   },
 })
 

@@ -17,10 +17,10 @@ export default YesNoQuestion = (props) => {
     <View style={{height: 100, width, marginVertical: 15}}>
       <Text style={styles.questionText}>{props.question}</Text>
       <View style={{flexDirection: 'row', justifyContent: 'flex-end', marginRight: 20}}>
-        <TouchableOpacity style={[styles.button, props.selection == 2 && {backgroundColor: '#E6AF45'}]}>
+        <TouchableOpacity style={[styles.button, props.selection == 2 && {backgroundColor: '#E6AF45'}]} onPress={props.handleYes}>
           <Text style={[styles.buttonText, props.selection == 2 && {color: 'white'}]}>Yes</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, props.selection == 1 && {backgroundColor: '#E6AF45'}]}>
+        <TouchableOpacity style={[styles.button, props.selection == 1 && {backgroundColor: '#E6AF45'}]} onPress={props.handleNo}>
           <Text style={[styles.buttonText, props.selection == 1 && {color: 'white'}]}>No</Text>
         </TouchableOpacity>
       </View>
