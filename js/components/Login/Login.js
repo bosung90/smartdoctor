@@ -3,29 +3,27 @@ import React, {Component} from 'react'
 import {
   Text,
   View,
-  TouchableHighlight,
+  TouchableOpacity,
+  StyleSheet,
+  TextInput,
 } from 'react-native'
-
-import * as firebase from 'firebase'
-// import { VictoryBar, VictoryPie } from "victory-native"
+import SDButton from '../buttons/SDButton'
 
 export default class Login extends Component {
   render() {
     return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>
-          The current scene is titled {this.props.title}
-        </Text>
-        <Text onPress={this.props.login}>
-          Attempt Login
-        </Text>
-        <Text onPress={this.props.logout}>
-          Attempt Logout
-        </Text>
+      <View style={styles.container}>
+        <View style={{flex: 1}}>
 
-        <TouchableHighlight onPress={()=>this._addItem()}><Text>Add  </Text></TouchableHighlight>
-
-        {this.props.onLogging && <Text>Logging In</Text>}
+        </View>
+        <View style={{flex: 1}}>
+          <View style={styles.button}>
+            <TextInput style={{textAlign: 'center', fontSize: 17}} placeholderTextColor='#959595' underlineColorAndroid='transparent' placeholder='Enter Patient ID here' keyboardType="numeric"/>
+          </View>
+          <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center'}]}>
+            <Text style={{color: 'white', fontSize: 17}}>Get Started</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
@@ -34,3 +32,21 @@ export default class Login extends Component {
     this.props.itemsRef.push({ title: 'text' })
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#448FAA',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    borderRadius: 100,
+    width: 250,
+    height: 70,
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+    marginVertical: 30,
+  }
+})
