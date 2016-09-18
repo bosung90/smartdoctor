@@ -19,7 +19,7 @@ export default class Login extends Component {
         </View>
         <View style={{flex: 1}}>
           <View style={styles.button}>
-            <TextInput style={{textAlign: 'center', fontSize: 17}} placeholderTextColor='#959595' underlineColorAndroid='transparent' placeholder='Enter Patient ID here' keyboardType="numeric"/>
+            <TextInput style={{textAlign: 'center', fontSize: 17}} placeholderTextColor='lightgray' underlineColorAndroid='transparent' placeholder='Enter Patient ID here' keyboardType="numeric"/>
           </View>
           <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6}]}>
             <Text style={{color: 'white', fontSize: 17}}>Get Started</Text>
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
     paddingHorizontal: 20,
-    marginVertical: 25,
+    marginVertical: 20,
   }
 })
