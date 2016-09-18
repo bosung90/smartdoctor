@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   TextInput,
+  Image,
 } from 'react-native'
 import SDButton from '../buttons/SDButton'
 
@@ -13,14 +14,14 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flex: 1}}>
-
+        <View style={{flex: 1, justifyContent:'center', alignItems: 'center',}}>
+          <Image source={require('../../img/smartdoctor_logo_white.png')}/>
         </View>
         <View style={{flex: 1}}>
           <View style={styles.button}>
             <TextInput style={{textAlign: 'center', fontSize: 17}} placeholderTextColor='#959595' underlineColorAndroid='transparent' placeholder='Enter Patient ID here' keyboardType="numeric"/>
           </View>
-          <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center'}]}>
+          <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6}]}>
             <Text style={{color: 'white', fontSize: 17}}>Get Started</Text>
           </TouchableOpacity>
         </View>
@@ -47,6 +48,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
     paddingHorizontal: 20,
-    marginVertical: 30,
+    marginVertical: 25,
   }
 })

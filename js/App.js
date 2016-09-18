@@ -14,10 +14,11 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <RouterWithRedux>
-          <Scene key='intro' component={Intro} title='Intro Page' />
-          <Scene key='doctor' component={Login} title='Doctor Page' />
-          <Scene key='login' component={Login} title='Login Page' />
-          <Scene key='loginTwo' component={Login} title='Login Two' />
+          <Scene key='root' hideNavBar>
+            <Scene key='intro' component={Intro} title='Intro Page' />
+            <Scene key='doctor' component={Login} title='Doctor Page' />
+            <Scene key='login' component={Login} title='Login Page' />
+          </Scene>
         </RouterWithRedux>
       </Provider>
     )

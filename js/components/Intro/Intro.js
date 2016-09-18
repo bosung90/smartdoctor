@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
   container: {
      ...StyleSheet.absoluteFillObject,
     backgroundColor: 'dodgerblue',
-    marginTop: 52,
     justifyContent: 'center',
     alignItems: 'center',
   },
