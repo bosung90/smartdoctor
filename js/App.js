@@ -5,6 +5,7 @@ import {Provider, connect} from 'react-redux'
 import configureStore from './store/configureStore'
 import Login from './components/Login'
 import Intro from './components/Intro'
+import Question from './components/Question'
 
 const RouterWithRedux = connect()(Router)
 const store = configureStore()
@@ -15,9 +16,10 @@ export default class App extends Component {
       <Provider store={store}>
         <RouterWithRedux>
           <Scene key='root' hideNavBar>
-            <Scene key='intro' component={Intro} title='Intro Page' />
+            <Scene key='intro' component={Intro} />
+            <Scene key='login' component={Login} />
+            <Scene key='question' component={Question} />
             <Scene key='doctor' component={Login} title='Doctor Page' />
-            <Scene key='login' component={Login} title='Login Page' />
           </Scene>
         </RouterWithRedux>
       </Provider>

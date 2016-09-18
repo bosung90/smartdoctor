@@ -8,7 +8,6 @@ import {
   TextInput,
   Image,
 } from 'react-native'
-import SDButton from '../buttons/SDButton'
 
 export default class Login extends Component {
   render() {
@@ -21,16 +20,12 @@ export default class Login extends Component {
           <View style={styles.button}>
             <TextInput style={{textAlign: 'center', fontSize: 17}} placeholderTextColor='lightgray' underlineColorAndroid='transparent' placeholder='Enter Patient ID here' keyboardType="numeric"/>
           </View>
-          <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6}]}>
+          <TouchableOpacity style={[styles.button, {backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6}]} onPress={this.props.handleGetStarted}>
             <Text style={{color: 'white', fontSize: 17}}>Get Started</Text>
           </TouchableOpacity>
         </View>
       </View>
     )
-  }
-
-  _addItem() {
-    this.props.itemsRef.push({ title: 'text' })
   }
 }
 

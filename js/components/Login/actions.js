@@ -14,6 +14,11 @@ export const logout = ()=>{
   return {type: actionTypes.ON_LOGOUT}
 }
 
+export const handleGetStarted = ()=> {
+  Actions.question()
+  return {type: ''}
+}
+
 export const loginWithDelay = ()=>{
   return (dispatch: any, getState: any) => {
     setTimeout(() => {
