@@ -5,6 +5,8 @@ import {
   View,
 } from 'react-native'
 
+// import { VictoryBar, VictoryPie } from "victory-native"
+
 export default class Login extends Component {
   render() {
     return (
@@ -15,6 +17,10 @@ export default class Login extends Component {
         <Text onPress={this.props.login}>
           Attempt Login
         </Text>
+        <Text onPress={this.props.logout}>
+          Attempt Logout
+        </Text>
+
         {this.props.onLogging && <Text>Logging In</Text>}
       </View>
     )

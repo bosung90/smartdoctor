@@ -9,6 +9,11 @@ export const login = ()=>{
   return {type: actionTypes.ON_LOGGIN}
 }
 
+export const logout = ()=>{
+  Actions.pop()
+  return {type: actionTypes.ON_LOGOUT}
+}
+
 export const loginWithDelay = ()=>{
   return (dispatch: any, getState: any) => {
     setTimeout(() => {
