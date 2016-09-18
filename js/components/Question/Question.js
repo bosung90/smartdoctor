@@ -39,7 +39,7 @@ export default class Question extends Component {
         <YesNoQuestion selection={this.state.selections[6]} question='7. Do you experience excessive fatigue?'  handleYes={()=>{this.handleSelection(6, 2)}}  handleNo={()=>{this.handleSelection(6, 1)}}/>
         <YesNoQuestion selection={this.state.selections[7]} question='8. Do you experience stomach pain?'  handleYes={()=>{this.handleSelection(7, 2)}}  handleNo={()=>{this.handleSelection(7, 1)}}/>
 
-        <TouchableOpacity style={[styles.button, {alignSelf: 'center', backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6, marginTop: 40,}]} onPress={this.props.questionSubmit}>
+        <TouchableOpacity style={[styles.button, {alignSelf: 'center', backgroundColor: '#E6AF45', alignItems: 'center', elevation: 6, marginTop: 40,}]} onPress={()=>{this.props.questionSubmit(this.state.selections); alert('Successfully submitted')}}>
           <Text style={{color: 'white', fontSize: 17}}>Submit</Text>
         </TouchableOpacity>
       </ScrollView>
