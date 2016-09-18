@@ -23,7 +23,7 @@ export default class Intro extends Component {
 const styles = StyleSheet.create({
   container: {
      ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: '#448FAA',
     justifyContent: 'center',
     alignItems: 'center',
   },
