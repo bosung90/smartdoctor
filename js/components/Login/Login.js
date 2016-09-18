@@ -3,8 +3,10 @@ import React, {Component} from 'react'
 import {
   Text,
   View,
+  TouchableHighlight,
 } from 'react-native'
 
+import * as firebase from 'firebase'
 // import { VictoryBar, VictoryPie } from "victory-native"
 
 export default class Login extends Component {
@@ -21,8 +23,14 @@ export default class Login extends Component {
           Attempt Logout
         </Text>
 
+        <TouchableHighlight onPress={()=>this._addItem()}><Text>Add  </Text></TouchableHighlight>
+
         {this.props.onLogging && <Text>Logging In</Text>}
       </View>
     )
+  }
+
+  _addItem() {
+    this.props.itemsRef.push({ title: 'text' })
   }
 }
